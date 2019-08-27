@@ -134,3 +134,98 @@ let convierteIntAFloat = {
 }
 
 convierteIntAFloat(42)
+
+
+func numerosQueCumplenConUnaCondicion(numerosAProbar: [Int], condicion: (Int) -> Bool) -> [Int]? {
+    if numerosAProbar.isEmpty {
+        return nil
+    }
+    
+    var arregloARegresar = [Int]()
+    for numero in numerosAProbar {
+        if condicion(numero) {
+            arregloARegresar.append(numero)
+        }
+    }
+    
+    return arregloARegresar
+}
+
+func mayorATres(numero: Int) -> Bool {
+    return numero > 3
+}
+
+let misNumeros = [-5, 23, 5, 45, 2, 54, 76, -23, 4]
+print(numerosQueCumplenConUnaCondicion(numerosAProbar: misNumeros, condicion: mayorATres)!)
+
+let multiplosDeCinco = {
+    (numero: Int) -> Bool in
+    return (numero % 5) == 0
+}
+
+print(numerosQueCumplenConUnaCondicion(numerosAProbar: misNumeros, condicion: multiplosDeCinco)!)
+
+var numerosPrimos = numerosQueCumplenConUnaCondicion(
+    numerosAProbar: misNumeros,
+    condicion: {
+        (numero: Int) -> Bool in
+        if numero < 2 {
+            return false
+        }
+        
+        for i in 2..<numero {
+            if numero % i == 0 {
+                return false
+            }
+        }
+        
+        return true
+})
+
+print("Tus primos son: \(numerosPrimos!)")
+
+
+// Ordenamiento
+var familiaSimpson = [
+    "Marge", "Bart", "Lisa", "Homero",
+    "Maggie", "Ayudante de Santa", "Abe",
+    "Patty", "Bola de Nieve II", "Selma",
+    "Hugo", "Herb", "Mona"
+]
+
+print(familiaSimpson.sorted())
+print(familiaSimpson)
+
+func ordenaHaciaAtras(string1: String, string2: String) -> Bool {
+    return string1 > string2
+}
+
+print(familiaSimpson.sorted(by: ordenaHaciaAtras(string1:string2:)))
+
+let ordenaHaciaAtrasInline = {
+    (string1: String, string2: String) -> Bool in
+    return string1 > string2
+}
+
+print(familiaSimpson.sorted(by: ordenaHaciaAtrasInline))
+
+print(familiaSimpson.sorted(by: {
+    (string1: String, string2: String) -> Bool in
+    return string1 > string2
+}))
+
+print(familiaSimpson.sorted(by: {
+    (string1, string2) -> Bool in
+    return string1 > string2
+}))
+
+print(familiaSimpson.sorted(by: {
+    (string1, string2) -> Bool in string1 > string2
+}))
+
+print(familiaSimpson.sorted(by: {
+    string1, string2 in string1 > string2
+}))
+
+print(familiaSimpson.sorted(by: { $0 > $1 }))
+print(familiaSimpson.sorted(by: >))
