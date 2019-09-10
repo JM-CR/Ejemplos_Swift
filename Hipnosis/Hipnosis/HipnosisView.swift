@@ -41,6 +41,10 @@ class HipnosisView: UIView {
 //        self.draw(self.bounds)
     }
     
+    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        <#code#>
+    }
+    
     override func draw(_ rect: CGRect) {
         let path = UIBezierPath()
 //        path.move(to: self.bounds.origin)

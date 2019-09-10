@@ -18,20 +18,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Ih4-Gv-TpI" customClass="HipnosisView" customModule="Hipnosis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M6j-mh-qZU">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ih4-Gv-TpI" secondAttribute="trailing" id="7oS-mA-7z6"/>
-                            <constraint firstAttribute="bottom" secondItem="Ih4-Gv-TpI" secondAttribute="bottom" id="KpG-QV-xWf"/>
-                            <constraint firstItem="Ih4-Gv-TpI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LzO-XT-kn2"/>
-                            <constraint firstItem="Ih4-Gv-TpI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OXT-80-Ju4"/>
+                            <constraint firstItem="M6j-mh-qZU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NUF-g2-B8n"/>
+                            <constraint firstAttribute="bottom" secondItem="M6j-mh-qZU" secondAttribute="bottom" id="jWM-T7-sbJ"/>
+                            <constraint firstItem="M6j-mh-qZU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="v6A-2g-YNF"/>
+                            <constraint firstItem="M6j-mh-qZU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vUs-Nk-2YG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="M6j-mh-qZU" id="unT-yi-7iM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
