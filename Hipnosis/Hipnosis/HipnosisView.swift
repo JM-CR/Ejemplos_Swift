@@ -9,7 +9,11 @@
 import UIKit
 
 class HipnosisView: UIView {
-    private var colorDelCirculo: UIColor = .blue
+    private var colorDelCirculo: UIColor = .blue {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
     
     func inicializaVista() {
         self.backgroundColor = .clear
@@ -25,6 +29,16 @@ class HipnosisView: UIView {
         // Este inicializador se llama cuando se instancia la vista desde storyboard
         super.init(coder: aDecoder)
         inicializaVista()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let rojo = CGFloat(arc4random() % 100) / 100
+        let verde = CGFloat(arc4random_uniform(100)) / 100
+        let azul = CGFloat.random(in: 0...100) / 100
+        let colorRandom = UIColor(red: rojo, green: verde, blue: azul, alpha: 1)
+        
+        self.colorDelCirculo = colorRandom
+//        self.draw(self.bounds)
     }
     
     override func draw(_ rect: CGRect) {
