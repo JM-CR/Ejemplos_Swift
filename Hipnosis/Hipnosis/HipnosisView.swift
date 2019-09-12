@@ -9,10 +9,16 @@
 import UIKit
 
 class HipnosisView: UIView {
+    // Property observer
     private var colorDelCirculo: UIColor = .blue {
         didSet {
             setNeedsDisplay()
         }
+    }
+    
+    // First responder - Acepta
+    override var canBecomeFirstResponder: Bool {
+        return true
     }
     
     func inicializaVista() {
@@ -42,7 +48,10 @@ class HipnosisView: UIView {
     }
     
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-        <#code#>
+        if motion == .motionShake {
+            print("Está temblando")
+            self.colorDelCirculo = .red
+        }
     }
     
     override func draw(_ rect: CGRect) {
