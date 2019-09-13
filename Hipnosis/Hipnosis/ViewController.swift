@@ -12,6 +12,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     var hipnosisUno: HipnosisView!
     var hipnosisDos: HipnosisView!
     var campoDeTexto: UITextField!
+    
+    // Animaciones con física
+    var animadorDinamico: UIDynamicAnimator!
+    var gravedad: UIGravityBehavior!
+    var colision: UICollisionBehavior!
+    
     @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
@@ -53,9 +59,30 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.campoDeTexto.returnKeyType = .done
         self.campoDeTexto.delegate = self   // Todas sus acciones mándamelas a mí
         self.hipnosisUno.addSubview(campoDeTexto)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
-        // Animaciones
-        UIView.animate(withDuration: <#T##TimeInterval#>, animations: <#T##() -> Void#>)
+        let ancho = self.view.bounds.size.width
+        let alto = self.view.bounds.size.height
+        
+        // Animación con resorte
+        UIView.animate(
+            withDuration: 2.0,
+            delay: 0,
+            usingSpringWithDamping: 0.25,
+            initialSpringVelocity: 0,
+            options: .layoutSubviews,
+            animations: {
+                let frameDestino = CGRect(x: ancho / 8, y: alto / 12, width: ancho * 0.75, height: 30)
+                self.campoDeTexto.frame = frameDestino
+        },
+            completion: { (fin) in
+                if fin {
+                    print("Ya terminó la animación")
+                }
+        })
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -66,11 +93,25 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func ponerMuchosTextosEnLaPantalla(texto: String) {
+        // Animación con físicas
+        self.animadorDinamico = UIDynamicAnimator(referenceView: self.view)   // En que vista aplicarla
+        self.gravedad = UIGravityBehavior()
+        self.gravedad.magnitude = 0.5
+        self.animadorDinamico.addBehavior(self.gravedad)   // Añadir efecto al animador
+        self.colision = UICollisionBehavior()
+//        self.colision.translatesReferenceBoundsIntoBoundary = true   // Convertir bordes en fronteras
+        let extremoPlano1 = CGPoint(x: self.view.bounds.midX / 2, y: self.view.bounds.midY * 1.2)
+        let extremoPlano2 = CGPoint(x: self.view.bounds.maxX * 0.75, y: self.view.bounds.midY * 1.2)
+        self.colision.addBoundary(withIdentifier: NSString("Plano1"), from: self.view.center, to: extremoPlano1)
+        self.colision.addBoundary(withIdentifier: NSString("Plano2"), from: self.view.center, to: extremoPlano2)
+        self.animadorDinamico.addBehavior(self.colision)   // Añadir efecto al animador
+        
         for _ in 0...20 {
             let labelParaTexto = UILabel()
             labelParaTexto.text = texto
             labelParaTexto.textColor = .black
             labelParaTexto.backgroundColor = .clear
+            labelParaTexto.alpha = 0
             labelParaTexto.sizeToFit()
             
             let coordenadaXMaxima = self.view.bounds.maxX - labelParaTexto.bounds.maxX
@@ -80,6 +121,38 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             labelParaTexto.frame.origin = CGPoint(x: origenX, y: origenY)
             self.hipnosisUno.addSubview(labelParaTexto)
+            
+            // Animación sin keyframes
+            // Aparecen después de estar invisibles
+            UIView.animate(withDuration: 3.0, animations: {
+                labelParaTexto.alpha = 1
+            })
+            
+            // Animación con keyframes
+            // Los junta y explota
+            UIView.animateKeyframes(
+                withDuration: 2.0,
+                delay: 3.0,
+                options: .layoutSubviews,
+                animations: {
+                    UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.8, animations: {
+                        labelParaTexto.center = self.hipnosisUno.center
+                    })
+                    
+                    UIView.addKeyframe(withRelativeStartTime: 0.8, relativeDuration: 0.2, animations: {
+                        labelParaTexto.center = CGPoint(
+                            x: CGFloat.random(in: 0...coordenadaXMaxima),
+                            y: CGFloat.random(in: 0...coordenadaYMaxima)
+                        )
+                    })
+            }, completion: { (fin) in
+                // Animación con física
+                if fin {
+                    self.gravedad.addItem(labelParaTexto)   // Aplicar física en labels
+                    self.colision.addItem(labelParaTexto)
+                }
+            })
+            
         }
     }
 }
