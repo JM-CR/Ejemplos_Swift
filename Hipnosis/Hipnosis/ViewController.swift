@@ -17,6 +17,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     var animadorDinamico: UIDynamicAnimator!
     var gravedad: UIGravityBehavior!
     var colision: UICollisionBehavior!
+    var propiedadesDeAnimacion: UIDynamicItemBehavior!
     
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -100,10 +101,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.animadorDinamico.addBehavior(self.gravedad)   // Añadir efecto al animador
         self.colision = UICollisionBehavior()
 //        self.colision.translatesReferenceBoundsIntoBoundary = true   // Convertir bordes en fronteras
-        let extremoPlano1 = CGPoint(x: self.view.bounds.midX / 2, y: self.view.bounds.midY * 1.2)
-        let extremoPlano2 = CGPoint(x: self.view.bounds.maxX * 0.75, y: self.view.bounds.midY * 1.2)
-        self.colision.addBoundary(withIdentifier: NSString("Plano1"), from: self.view.center, to: extremoPlano1)
-        self.colision.addBoundary(withIdentifier: NSString("Plano2"), from: self.view.center, to: extremoPlano2)
+        let extremo1 = CGPoint(x: self.view.bounds.midX / 2, y: self.view.bounds.midY * 1.2)
+        let extremo2 = CGPoint(x: self.view.bounds.maxX * 0.75, y: self.view.bounds.midY * 1.2)
+        let origen1 = CGPoint(x: 0, y: self.view.bounds.midY)
+        let origen2 = CGPoint(x: self.view.bounds.maxX, y: self.view.bounds.midY)
+        self.colision.addBoundary(withIdentifier: NSString("Plano1"), from: origen1, to: extremo1)
+        self.colision.addBoundary(withIdentifier: NSString("Plano2"), from: origen2, to: extremo2)
+        self.colision.addBoundary(withIdentifier: NSString("Piso"), from: CGPoint(x: 0, y: self.view.bounds.maxY), to: CGPoint(x: self.view.bounds.maxX, y: self.view.bounds.maxY))
+        self.propiedadesDeAnimacion = UIDynamicItemBehavior()
+        self.propiedadesDeAnimacion.elasticity = 1.0
         self.animadorDinamico.addBehavior(self.colision)   // Añadir efecto al animador
         
         for _ in 0...20 {
@@ -150,6 +156,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 if fin {
                     self.gravedad.addItem(labelParaTexto)   // Aplicar física en labels
                     self.colision.addItem(labelParaTexto)
+                    self.propiedadesDeAnimacion.addItem(labelParaTexto)
                 }
             })
             
