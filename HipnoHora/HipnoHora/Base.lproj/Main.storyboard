@@ -17,42 +17,63 @@
                     <view key="view" contentMode="scaleToFill" id="g3u-nR-BUR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.81777970592500715" blue="0.71063280508477622" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iCw-BU-ab4" customClass="HipnosisView" customModule="HipnoHora" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iCw-BU-ab4" firstAttribute="leading" secondItem="wbO-D9-WZi" secondAttribute="leading" id="0wF-af-WGi"/>
+                            <constraint firstItem="iCw-BU-ab4" firstAttribute="bottom" secondItem="wbO-D9-WZi" secondAttribute="bottom" id="VxO-XX-VIR"/>
+                            <constraint firstItem="iCw-BU-ab4" firstAttribute="trailing" secondItem="wbO-D9-WZi" secondAttribute="trailing" id="WXf-wr-Mlk"/>
+                            <constraint firstItem="iCw-BU-ab4" firstAttribute="top" secondItem="g3u-nR-BUR" secondAttribute="top" id="f2b-cH-QuD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="wbO-D9-WZi"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="ePp-6l-Pt3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X3z-Ij-Hdk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7" y="28"/>
-        </scene>
-        <!--Item 3-->
-        <scene sceneID="Q7f-n9-ePN">
-            <objects>
-                <viewController id="OKj-wX-5aE" userLabel="Item 3" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="D4J-24-JAb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.98495142899090127" green="1" blue="0.7105707340433105" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <viewLayoutGuide key="safeArea" id="LZa-Cv-wN1"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 3" id="BBg-8l-iME"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bjU-dG-udw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-913" y="402"/>
+            <point key="canvasLocation" x="5.7971014492753632" y="27.455357142857142"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="ICD-UP-dAz">
             <objects>
-                <viewController id="j2l-0O-p9u" sceneMemberID="viewController">
+                <viewController id="j2l-0O-p9u" customClass="RecordatorioViewController" customModule="HipnoHora" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AuM-R6-PzZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.80156001875026273" green="0.87502348630218607" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Acb-SR-5Lt">
+                                <rect key="frame" x="0.0" y="340" width="414" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="590975184.81351101">
+                                    <!--2019-09-23 23:46:24 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuN-UB-NOY">
+                                <rect key="frame" x="163.5" y="564" width="87" height="30"/>
+                                <state key="normal" title="Agendar cita"/>
+                                <connections>
+                                    <action selector="agendarCita" destination="j2l-0O-p9u" eventType="touchUpInside" id="Qdb-ds-pon"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yuN-UB-NOY" firstAttribute="top" secondItem="Acb-SR-5Lt" secondAttribute="bottom" constant="8" id="6WE-3Y-I4f"/>
+                            <constraint firstItem="Acb-SR-5Lt" firstAttribute="leading" secondItem="MgS-PX-Ne4" secondAttribute="leading" id="7eB-Bw-7EP"/>
+                            <constraint firstItem="yuN-UB-NOY" firstAttribute="centerX" secondItem="AuM-R6-PzZ" secondAttribute="centerX" id="Wlq-4j-s34"/>
+                            <constraint firstItem="Acb-SR-5Lt" firstAttribute="top" secondItem="MgS-PX-Ne4" secondAttribute="top" constant="296" id="cEm-9a-M9i"/>
+                            <constraint firstItem="Acb-SR-5Lt" firstAttribute="trailing" secondItem="MgS-PX-Ne4" secondAttribute="trailing" id="dyd-ku-6j6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="MgS-PX-Ne4"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="Z8T-Mq-295"/>
+                    <connections>
+                        <outlet property="datePicker" destination="Acb-SR-5Lt" id="WYG-3G-NAE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4HX-xB-kQv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,7 +91,6 @@
                     <connections>
                         <segue destination="j2l-0O-p9u" kind="relationship" relationship="viewControllers" id="8oy-3f-c0F"/>
                         <segue destination="PH6-BM-ceB" kind="relationship" relationship="viewControllers" id="13a-hK-MHx"/>
-                        <segue destination="OKj-wX-5aE" kind="relationship" relationship="viewControllers" id="ccV-lh-RIZ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cw6-7g-H52" userLabel="First Responder" sceneMemberID="firstResponder"/>

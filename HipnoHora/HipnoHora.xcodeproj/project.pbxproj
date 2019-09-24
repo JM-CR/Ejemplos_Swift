@@ -13,6 +13,8 @@
 		EABA103D233305BC002870C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EABA103B233305BC002870C9 /* LaunchScreen.storyboard */; };
 		EABA1048233305BC002870C9 /* HipnoHoraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABA1047233305BC002870C9 /* HipnoHoraTests.swift */; };
 		EABA1053233305BC002870C9 /* HipnoHoraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABA1052233305BC002870C9 /* HipnoHoraUITests.swift */; };
+		EACE1B5423398FE2008EFB64 /* HipnosisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACE1B5323398FE2008EFB64 /* HipnosisView.swift */; };
+		EACE1B562339948A008EFB64 /* RecordatorioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACE1B5523399489008EFB64 /* RecordatorioViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		EABA104E233305BC002870C9 /* HipnoHoraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HipnoHoraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EABA1052233305BC002870C9 /* HipnoHoraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HipnoHoraUITests.swift; sourceTree = "<group>"; };
 		EABA1054233305BC002870C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EACE1B5323398FE2008EFB64 /* HipnosisView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HipnosisView.swift; path = ../../Hipnosis/Hipnosis/HipnosisView.swift; sourceTree = "<group>"; };
+		EACE1B5523399489008EFB64 /* RecordatorioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordatorioViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +100,9 @@
 			isa = PBXGroup;
 			children = (
 				EABA1032233305BC002870C9 /* AppDelegate.swift */,
+				EACE1B5323398FE2008EFB64 /* HipnosisView.swift */,
 				EABA1036233305BC002870C9 /* Main.storyboard */,
+				EACE1B5523399489008EFB64 /* RecordatorioViewController.swift */,
 				EABA1039233305BC002870C9 /* Assets.xcassets */,
 				EABA103B233305BC002870C9 /* LaunchScreen.storyboard */,
 				EABA103E233305BC002870C9 /* Info.plist */,
@@ -253,7 +259,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EACE1B562339948A008EFB64 /* RecordatorioViewController.swift in Sources */,
 				EABA1033233305BC002870C9 /* AppDelegate.swift in Sources */,
+				EACE1B5423398FE2008EFB64 /* HipnosisView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
