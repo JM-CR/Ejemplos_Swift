@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NFc-cA-7VM">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NFc-cA-7VM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Hipnósis-->
         <scene sceneID="g1m-Nn-BqH">
             <objects>
-                <viewController id="PH6-BM-ceB" sceneMemberID="viewController">
+                <viewController id="PH6-BM-ceB" customClass="HipnosisViewController" customModule="HipnoHora" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g3u-nR-BUR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,13 +30,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wbO-D9-WZi"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="ePp-6l-Pt3"/>
+                    <tabBarItem key="tabBarItem" title="Hipnósis" image="Hipno.png" id="ePp-6l-Pt3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X3z-Ij-Hdk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5.7971014492753632" y="27.455357142857142"/>
         </scene>
-        <!--Item 1-->
+        <!--Agendar-->
         <scene sceneID="ICD-UP-dAz">
             <objects>
                 <viewController id="j2l-0O-p9u" customClass="RecordatorioViewController" customModule="HipnoHora" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,9 +46,6 @@
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Acb-SR-5Lt">
                                 <rect key="frame" x="0.0" y="340" width="414" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="590975184.81351101">
-                                    <!--2019-09-23 23:46:24 +0000-->
-                                </date>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuN-UB-NOY">
                                 <rect key="frame" x="163.5" y="564" width="87" height="30"/>
@@ -70,7 +65,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MgS-PX-Ne4"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Z8T-Mq-295"/>
+                    <tabBarItem key="tabBarItem" title="Agendar" image="Hora.png" id="Z8T-Mq-295"/>
                     <connections>
                         <outlet property="datePicker" destination="Acb-SR-5Lt" id="WYG-3G-NAE"/>
                     </connections>
@@ -98,4 +93,8 @@
             <point key="canvasLocation" x="-912" y="-296"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Hipno.png" width="30" height="30"/>
+        <image name="Hora.png" width="30" height="30"/>
+    </resources>
 </document>

@@ -20,18 +20,26 @@ class RecordatorioViewController: UIViewController {
         UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .sound, .alert], completionHandler: { (autorizado, error) in
             print("¿El usuario autorizó? \(autorizado) ")
         })
+        self.datePicker.minimumDate = Date()
     }
     
     @IBAction func agendarCita() {
         let horaLocal = self.datePicker.date.addingTimeInterval(TimeInterval(TimeZone.current.secondsFromGMT()))
+        print(horaLocal)
         
         // Notificaciones del usuario
         let notificacion = UNMutableNotificationContent()
         notificacion.title = "Hipnotizamiento"
         notificacion.body = "Llegó la hora de tu sesión"
         notificacion.badge = 1
-        notificacion.sound = UNNotificationSound.default
-        let disparo = UNCalendarNotificationTrigger.init(dateMatching: Calendar.current.dateComponents([.day, .month, .hour, .minute], from: datePicker.date), repeats: true)
+//        notificacion.sound = UNNotificationSound.default
+        notificacion.sound = UNNotificationSound(named: UNNotificationSoundName("sonido.wav"))
+        let disparo = UNCalendarNotificationTrigger.init(
+            dateMatching: Calendar.current.dateComponents(
+                [.day, .month, .hour, .minute],
+                from: datePicker.date
+            ), repeats: true
+        )
         let request = UNNotificationRequest(identifier: "Hipnosis", content: notificacion, trigger: disparo)
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
         print(request.trigger!)
