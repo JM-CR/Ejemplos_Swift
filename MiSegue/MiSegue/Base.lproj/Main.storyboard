@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Correo View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CorreoViewController" customModule="MiSegue" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpX-wC-hlv">
+                                <rect key="frame" x="184" y="433" width="46" height="30"/>
+                                <state key="normal" title="Editar"/>
+                                <connections>
+                                    <segue destination="9gL-PS-KJS" kind="presentation" identifier="editar" modalTransitionStyle="flipHorizontal" id="WwQ-fs-bHK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWz-X3-duJ">
+                                <rect key="frame" x="187" y="471" width="40" height="30"/>
+                                <state key="normal" title="Timer"/>
+                                <connections>
+                                    <action selector="temporizador" destination="BYZ-38-t0r" eventType="touchUpInside" id="iDk-QE-Nxd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jtopo@springfield.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOr-MQ-193">
+                                <rect key="frame" x="20" y="370" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tu correo registrado es:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bo7-Sx-PLV">
+                                <rect key="frame" x="20" y="341" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.78098699014466255" blue="0.59118347877112509" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XOr-MQ-193" secondAttribute="trailing" constant="20" id="4Qr-zA-XQf"/>
+                            <constraint firstItem="sWz-X3-duJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="187" id="G7N-aX-2eY"/>
+                            <constraint firstItem="qpX-wC-hlv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="184" id="IDd-nb-Zy5"/>
+                            <constraint firstItem="bo7-Sx-PLV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="297" id="U2g-KZ-dln"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qpX-wC-hlv" secondAttribute="trailing" constant="184" id="VBp-Cl-IQ3"/>
+                            <constraint firstItem="XOr-MQ-193" firstAttribute="top" secondItem="bo7-Sx-PLV" secondAttribute="bottom" constant="8" id="VJE-MI-CI1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qpX-wC-hlv" secondAttribute="bottom" constant="399" id="VJl-2z-jhL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sWz-X3-duJ" secondAttribute="trailing" constant="187" id="Wi7-0m-OTG"/>
+                            <constraint firstItem="sWz-X3-duJ" firstAttribute="top" secondItem="qpX-wC-hlv" secondAttribute="bottom" constant="8" id="YKO-gf-vAI"/>
+                            <constraint firstItem="XOr-MQ-193" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bpg-LP-6Aa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sWz-X3-duJ" secondAttribute="bottom" constant="361" id="jGk-76-jPX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bo7-Sx-PLV" secondAttribute="trailing" constant="20" id="oFd-cC-eEZ"/>
+                            <constraint firstItem="qpX-wC-hlv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="389" id="t9C-O6-ESh"/>
+                            <constraint firstItem="qpX-wC-hlv" firstAttribute="top" secondItem="XOr-MQ-193" secondAttribute="bottom" constant="42" id="wLP-Cn-nYD"/>
+                            <constraint firstItem="bo7-Sx-PLV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xH4-TE-t5i"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="labelDeCorreo" destination="XOr-MQ-193" id="pUZ-J9-1Mt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="149" y="21"/>
+        </scene>
+        <!--Editor View Controller-->
+        <scene sceneID="Dnx-4B-1PB">
+            <objects>
+                <viewController id="9gL-PS-KJS" customClass="EditorViewController" customModule="MiSegue" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uSP-d1-tCU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEx-C3-UNO">
+                                <rect key="frame" x="192" y="433" width="30" height="30"/>
+                                <state key="normal" title="Ok">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="ok" destination="9gL-PS-KJS" eventType="touchUpInside" id="gBe-fe-WUp"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VPI-7H-b8j">
+                                <rect key="frame" x="20" y="388" width="374" height="30"/>
+                                <color key="backgroundColor" red="0.76596810241659818" green="0.77861674133014624" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edita tu correo electrónico" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsY-rg-iyg">
+                                <rect key="frame" x="106" y="359" width="202" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80938430191249633" green="0.67545878687364835" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="VPI-7H-b8j" firstAttribute="top" secondItem="dsY-rg-iyg" secondAttribute="bottom" constant="8" id="2u4-4b-6xQ"/>
+                            <constraint firstItem="dEx-C3-UNO" firstAttribute="top" secondItem="VPI-7H-b8j" secondAttribute="bottom" constant="15" id="8zQ-Kq-zfW"/>
+                            <constraint firstItem="dGA-5I-qTb" firstAttribute="bottom" secondItem="dEx-C3-UNO" secondAttribute="bottom" constant="399" id="UL6-i8-lTj"/>
+                            <constraint firstItem="VPI-7H-b8j" firstAttribute="leading" secondItem="dGA-5I-qTb" secondAttribute="leading" constant="20" id="Vtg-gg-2Sj"/>
+                            <constraint firstItem="dEx-C3-UNO" firstAttribute="top" secondItem="dGA-5I-qTb" secondAttribute="top" constant="389" id="ZFT-9X-gKH"/>
+                            <constraint firstItem="dsY-rg-iyg" firstAttribute="leading" secondItem="dGA-5I-qTb" secondAttribute="leading" constant="106" id="fbN-Qf-q7l"/>
+                            <constraint firstItem="dsY-rg-iyg" firstAttribute="top" secondItem="dGA-5I-qTb" secondAttribute="top" constant="315" id="g1m-3A-00M"/>
+                            <constraint firstItem="dGA-5I-qTb" firstAttribute="trailing" secondItem="dEx-C3-UNO" secondAttribute="trailing" constant="192" id="j22-LT-SiH"/>
+                            <constraint firstItem="dGA-5I-qTb" firstAttribute="trailing" secondItem="VPI-7H-b8j" secondAttribute="trailing" constant="20" id="jnU-4G-zN1"/>
+                            <constraint firstItem="dEx-C3-UNO" firstAttribute="leading" secondItem="dGA-5I-qTb" secondAttribute="leading" constant="192" id="oca-8z-YnC"/>
+                            <constraint firstItem="dGA-5I-qTb" firstAttribute="trailing" secondItem="dsY-rg-iyg" secondAttribute="trailing" constant="106" id="ruo-9Z-Dgb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dGA-5I-qTb"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="P2h-Sk-zUE" appends="YES" id="fXz-Ax-Mwl"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="botonOk" destination="dEx-C3-UNO" id="0Ym-oC-oAw"/>
+                        <outlet property="campoDeEdicion" destination="VPI-7H-b8j" id="FQu-Un-2ju"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ye-Ew-Oph" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="P2h-Sk-zUE">
+                    <connections>
+                        <action selector="tapRecibido:" destination="9gL-PS-KJS" id="Iao-jx-OfP"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1015.9420289855074" y="20.758928571428569"/>
+        </scene>
+    </scenes>
+</document>

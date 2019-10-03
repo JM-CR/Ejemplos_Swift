@@ -1,0 +1,603 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EAC9A6C323456733002A8EEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC9A6C223456733002A8EEA /* AppDelegate.swift */; };
+		EAC9A6C523456733002A8EEA /* CorreoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC9A6C423456733002A8EEA /* CorreoViewController.swift */; };
+		EAC9A6C823456733002A8EEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC9A6C623456733002A8EEA /* Main.storyboard */; };
+		EAC9A6CA23456734002A8EEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAC9A6C923456734002A8EEA /* Assets.xcassets */; };
+		EAC9A6CD23456734002A8EEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC9A6CB23456734002A8EEA /* LaunchScreen.storyboard */; };
+		EAC9A6D823456734002A8EEA /* MiSegueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC9A6D723456734002A8EEA /* MiSegueTests.swift */; };
+		EAC9A6E323456734002A8EEA /* MiSegueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC9A6E223456734002A8EEA /* MiSegueUITests.swift */; };
+		EAC9A6F1234567F9002A8EEA /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC9A6F0234567F9002A8EEA /* EditorViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EAC9A6D423456734002A8EEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAC9A6B723456733002A8EEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAC9A6BE23456733002A8EEA;
+			remoteInfo = MiSegue;
+		};
+		EAC9A6DF23456734002A8EEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAC9A6B723456733002A8EEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAC9A6BE23456733002A8EEA;
+			remoteInfo = MiSegue;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EAC9A6BF23456733002A8EEA /* MiSegue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiSegue.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAC9A6C223456733002A8EEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EAC9A6C423456733002A8EEA /* CorreoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorreoViewController.swift; sourceTree = "<group>"; };
+		EAC9A6C723456733002A8EEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EAC9A6C923456734002A8EEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EAC9A6CC23456734002A8EEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EAC9A6CE23456734002A8EEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAC9A6D323456734002A8EEA /* MiSegueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiSegueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAC9A6D723456734002A8EEA /* MiSegueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiSegueTests.swift; sourceTree = "<group>"; };
+		EAC9A6D923456734002A8EEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAC9A6DE23456734002A8EEA /* MiSegueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiSegueUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAC9A6E223456734002A8EEA /* MiSegueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiSegueUITests.swift; sourceTree = "<group>"; };
+		EAC9A6E423456734002A8EEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAC9A6F0234567F9002A8EEA /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EAC9A6BC23456733002A8EEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAC9A6D023456734002A8EEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAC9A6DB23456734002A8EEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EAC9A6B623456733002A8EEA = {
+			isa = PBXGroup;
+			children = (
+				EAC9A6C123456733002A8EEA /* MiSegue */,
+				EAC9A6D623456734002A8EEA /* MiSegueTests */,
+				EAC9A6E123456734002A8EEA /* MiSegueUITests */,
+				EAC9A6C023456733002A8EEA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EAC9A6C023456733002A8EEA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EAC9A6BF23456733002A8EEA /* MiSegue.app */,
+				EAC9A6D323456734002A8EEA /* MiSegueTests.xctest */,
+				EAC9A6DE23456734002A8EEA /* MiSegueUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EAC9A6C123456733002A8EEA /* MiSegue */ = {
+			isa = PBXGroup;
+			children = (
+				EAC9A6C223456733002A8EEA /* AppDelegate.swift */,
+				EAC9A6F223456839002A8EEA /* ViewControllers */,
+				EAC9A6C623456733002A8EEA /* Main.storyboard */,
+				EAC9A6C923456734002A8EEA /* Assets.xcassets */,
+				EAC9A6CB23456734002A8EEA /* LaunchScreen.storyboard */,
+				EAC9A6CE23456734002A8EEA /* Info.plist */,
+			);
+			path = MiSegue;
+			sourceTree = "<group>";
+		};
+		EAC9A6D623456734002A8EEA /* MiSegueTests */ = {
+			isa = PBXGroup;
+			children = (
+				EAC9A6D723456734002A8EEA /* MiSegueTests.swift */,
+				EAC9A6D923456734002A8EEA /* Info.plist */,
+			);
+			path = MiSegueTests;
+			sourceTree = "<group>";
+		};
+		EAC9A6E123456734002A8EEA /* MiSegueUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EAC9A6E223456734002A8EEA /* MiSegueUITests.swift */,
+				EAC9A6E423456734002A8EEA /* Info.plist */,
+			);
+			path = MiSegueUITests;
+			sourceTree = "<group>";
+		};
+		EAC9A6F223456839002A8EEA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EAC9A6C423456733002A8EEA /* CorreoViewController.swift */,
+				EAC9A6F0234567F9002A8EEA /* EditorViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EAC9A6BE23456733002A8EEA /* MiSegue */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAC9A6E723456734002A8EEA /* Build configuration list for PBXNativeTarget "MiSegue" */;
+			buildPhases = (
+				EAC9A6BB23456733002A8EEA /* Sources */,
+				EAC9A6BC23456733002A8EEA /* Frameworks */,
+				EAC9A6BD23456733002A8EEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MiSegue;
+			productName = MiSegue;
+			productReference = EAC9A6BF23456733002A8EEA /* MiSegue.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EAC9A6D223456734002A8EEA /* MiSegueTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAC9A6EA23456734002A8EEA /* Build configuration list for PBXNativeTarget "MiSegueTests" */;
+			buildPhases = (
+				EAC9A6CF23456734002A8EEA /* Sources */,
+				EAC9A6D023456734002A8EEA /* Frameworks */,
+				EAC9A6D123456734002A8EEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EAC9A6D523456734002A8EEA /* PBXTargetDependency */,
+			);
+			name = MiSegueTests;
+			productName = MiSegueTests;
+			productReference = EAC9A6D323456734002A8EEA /* MiSegueTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EAC9A6DD23456734002A8EEA /* MiSegueUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAC9A6ED23456734002A8EEA /* Build configuration list for PBXNativeTarget "MiSegueUITests" */;
+			buildPhases = (
+				EAC9A6DA23456734002A8EEA /* Sources */,
+				EAC9A6DB23456734002A8EEA /* Frameworks */,
+				EAC9A6DC23456734002A8EEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EAC9A6E023456734002A8EEA /* PBXTargetDependency */,
+			);
+			name = MiSegueUITests;
+			productName = MiSegueUITests;
+			productReference = EAC9A6DE23456734002A8EEA /* MiSegueUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EAC9A6B723456733002A8EEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Contreras Rocha Josue Mosiah";
+				TargetAttributes = {
+					EAC9A6BE23456733002A8EEA = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					EAC9A6D223456734002A8EEA = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = EAC9A6BE23456733002A8EEA;
+					};
+					EAC9A6DD23456734002A8EEA = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = EAC9A6BE23456733002A8EEA;
+					};
+				};
+			};
+			buildConfigurationList = EAC9A6BA23456733002A8EEA /* Build configuration list for PBXProject "MiSegue" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EAC9A6B623456733002A8EEA;
+			productRefGroup = EAC9A6C023456733002A8EEA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EAC9A6BE23456733002A8EEA /* MiSegue */,
+				EAC9A6D223456734002A8EEA /* MiSegueTests */,
+				EAC9A6DD23456734002A8EEA /* MiSegueUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EAC9A6BD23456733002A8EEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAC9A6CD23456734002A8EEA /* LaunchScreen.storyboard in Resources */,
+				EAC9A6CA23456734002A8EEA /* Assets.xcassets in Resources */,
+				EAC9A6C823456733002A8EEA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAC9A6D123456734002A8EEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAC9A6DC23456734002A8EEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EAC9A6BB23456733002A8EEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAC9A6C523456733002A8EEA /* CorreoViewController.swift in Sources */,
+				EAC9A6F1234567F9002A8EEA /* EditorViewController.swift in Sources */,
+				EAC9A6C323456733002A8EEA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAC9A6CF23456734002A8EEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAC9A6D823456734002A8EEA /* MiSegueTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAC9A6DA23456734002A8EEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAC9A6E323456734002A8EEA /* MiSegueUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EAC9A6D523456734002A8EEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAC9A6BE23456733002A8EEA /* MiSegue */;
+			targetProxy = EAC9A6D423456734002A8EEA /* PBXContainerItemProxy */;
+		};
+		EAC9A6E023456734002A8EEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAC9A6BE23456733002A8EEA /* MiSegue */;
+			targetProxy = EAC9A6DF23456734002A8EEA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EAC9A6C623456733002A8EEA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EAC9A6C723456733002A8EEA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EAC9A6CB23456734002A8EEA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EAC9A6CC23456734002A8EEA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EAC9A6E523456734002A8EEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EAC9A6E623456734002A8EEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EAC9A6E823456734002A8EEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6Y824SG78Q;
+				INFOPLIST_FILE = MiSegue/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mosh.MiSegue;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EAC9A6E923456734002A8EEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6Y824SG78Q;
+				INFOPLIST_FILE = MiSegue/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mosh.MiSegue;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EAC9A6EB23456734002A8EEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6Y824SG78Q;
+				INFOPLIST_FILE = MiSegueTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mosh.MiSegueTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiSegue.app/MiSegue";
+			};
+			name = Debug;
+		};
+		EAC9A6EC23456734002A8EEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6Y824SG78Q;
+				INFOPLIST_FILE = MiSegueTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mosh.MiSegueTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiSegue.app/MiSegue";
+			};
+			name = Release;
+		};
+		EAC9A6EE23456734002A8EEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6Y824SG78Q;
+				INFOPLIST_FILE = MiSegueUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mosh.MiSegueUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MiSegue;
+			};
+			name = Debug;
+		};
+		EAC9A6EF23456734002A8EEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6Y824SG78Q;
+				INFOPLIST_FILE = MiSegueUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mosh.MiSegueUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MiSegue;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EAC9A6BA23456733002A8EEA /* Build configuration list for PBXProject "MiSegue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAC9A6E523456734002A8EEA /* Debug */,
+				EAC9A6E623456734002A8EEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAC9A6E723456734002A8EEA /* Build configuration list for PBXNativeTarget "MiSegue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAC9A6E823456734002A8EEA /* Debug */,
+				EAC9A6E923456734002A8EEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAC9A6EA23456734002A8EEA /* Build configuration list for PBXNativeTarget "MiSegueTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAC9A6EB23456734002A8EEA /* Debug */,
+				EAC9A6EC23456734002A8EEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAC9A6ED23456734002A8EEA /* Build configuration list for PBXNativeTarget "MiSegueUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAC9A6EE23456734002A8EEA /* Debug */,
+				EAC9A6EF23456734002A8EEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EAC9A6B723456733002A8EEA /* Project object */;
+}
