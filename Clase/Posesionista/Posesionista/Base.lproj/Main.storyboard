@@ -17,13 +17,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="NnP-D0-bSx">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PN1-6j-nuU">
+                                    <rect key="frame" x="345" y="7" width="45" height="30"/>
+                                    <state key="normal" title="Añadir"/>
+                                    <connections>
+                                        <action selector="añadeCosas:" destination="tC3-hm-4TK" eventType="touchUpInside" id="Juj-31-QGv"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dfm-Um-vB2">
+                                    <rect key="frame" x="29" y="7" width="40" height="30"/>
+                                    <state key="normal" title="Editar"/>
+                                    <connections>
+                                        <action selector="cambiaModoDeEdicion:" destination="tC3-hm-4TK" eventType="touchUpInside" id="Q61-Bg-sZb"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="Dfm-Um-vB2" firstAttribute="leading" secondItem="NnP-D0-bSx" secondAttribute="leading" constant="29" id="1HS-NU-vZ1"/>
+                                <constraint firstAttribute="trailing" secondItem="PN1-6j-nuU" secondAttribute="trailing" constant="24" id="9Vn-VQ-a9O"/>
+                                <constraint firstItem="PN1-6j-nuU" firstAttribute="top" secondItem="NnP-D0-bSx" secondAttribute="top" constant="7" id="LP7-Mp-xQG"/>
+                                <constraint firstItem="PN1-6j-nuU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Dfm-Um-vB2" secondAttribute="trailing" constant="276" id="aae-00-DFV"/>
+                                <constraint firstItem="Dfm-Um-vB2" firstAttribute="top" secondItem="NnP-D0-bSx" secondAttribute="top" constant="7" id="u9w-tX-w1J"/>
+                            </constraints>
+                        </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cosaCell" id="CTs-Se-ogg">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cosaCell" textLabel="to3-sg-Jan" detailTextLabel="A8A-v0-FN7" style="IBUITableViewCellStyleValue1" id="CTs-Se-ogg">
+                                <rect key="frame" x="0.0" y="72" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CTs-Se-ogg" id="4En-Rc-zK5">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="to3-sg-Jan">
+                                            <rect key="frame" x="20" y="12" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="A8A-v0-FN7">
+                                            <rect key="frame" x="350" y="12" width="44" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
