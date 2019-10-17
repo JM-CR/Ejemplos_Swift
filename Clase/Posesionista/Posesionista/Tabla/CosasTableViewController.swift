@@ -12,8 +12,17 @@ class CosasTableViewController: UITableViewController {
 
     let miInventario = Inventario()
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        // Botones para la navegación
+        self.navigationItem.leftBarButtonItem = editButtonItem
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -49,22 +58,9 @@ class CosasTableViewController: UITableViewController {
     }
 
     /**
-     Entra y sale del modo de edición.
-     */
-    @IBAction func cambiaModoDeEdicion(_ sender: UIButton) {
-        if isEditing {
-            sender.setTitle("Editar", for: .normal)
-            setEditing(false, animated: true)
-        } else {
-            sender.setTitle("Listo", for: .normal)
-            setEditing(true, animated: true)
-        }
-    }
-    
-    /**
      Permite añadir una nueva fila.
      */
-    @IBAction func añadeCosas(_ sender: UIButton) {
+    @IBAction func añadeCosas(_ sender: UIBarButtonItem) {
         let nuevaCosa = miInventario.creaCosa()
         let indiceDeNuevaCosa = miInventario.todasLasCosas.firstIndex(of: nuevaCosa)!
 //        let ultimaFila = tableView.numberOfRows(inSection: 0)
