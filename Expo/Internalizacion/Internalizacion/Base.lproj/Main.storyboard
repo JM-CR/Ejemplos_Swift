@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Internalizacion" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Texto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwC-iY-se7">
+                                <rect key="frame" x="127" y="195" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hola" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sJ-ON-j6o">
+                                <rect key="frame" x="232" y="195" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moneda" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0r-R7-SY6">
+                                <rect key="frame" x="127" y="256" width="63" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="63" id="GYR-b6-zd0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MXN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHB-JA-tTL">
+                                <rect key="frame" x="239" y="256" width="38" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="APW-w8-A00"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wk8-NM-Mcu">
+                                <rect key="frame" x="174.5" y="332" width="65" height="30"/>
+                                <state key="normal" title="Presionar"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yHB-JA-tTL" secondAttribute="trailing" constant="137" id="EoY-4h-kUo"/>
+                            <constraint firstItem="qwC-iY-se7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="127" id="LgA-tT-TMD"/>
+                            <constraint firstItem="8sJ-ON-j6o" firstAttribute="leading" secondItem="qwC-iY-se7" secondAttribute="trailing" constant="63" id="Ufo-tr-2ej"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wk8-NM-Mcu" secondAttribute="trailing" constant="174.5" id="Vjj-7E-RhW"/>
+                            <constraint firstItem="Wk8-NM-Mcu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="174.5" id="a0R-Nm-95K"/>
+                            <constraint firstItem="yHB-JA-tTL" firstAttribute="top" secondItem="8sJ-ON-j6o" secondAttribute="bottom" constant="40" id="dJX-j7-oNs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8sJ-ON-j6o" secondAttribute="trailing" constant="147" id="dvw-7n-es5"/>
+                            <constraint firstItem="g0r-R7-SY6" firstAttribute="top" secondItem="qwC-iY-se7" secondAttribute="bottom" constant="40" id="gkW-8t-7Qp"/>
+                            <constraint firstItem="8sJ-ON-j6o" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="151" id="hVy-ln-uX7"/>
+                            <constraint firstItem="yHB-JA-tTL" firstAttribute="leading" secondItem="g0r-R7-SY6" secondAttribute="trailing" constant="49" id="iRQ-T3-oHf"/>
+                            <constraint firstItem="Wk8-NM-Mcu" firstAttribute="top" secondItem="yHB-JA-tTL" secondAttribute="bottom" constant="55" id="jDL-hW-LQD"/>
+                            <constraint firstItem="Wk8-NM-Mcu" firstAttribute="top" secondItem="g0r-R7-SY6" secondAttribute="bottom" constant="55" id="sZI-fB-L3W"/>
+                            <constraint firstItem="g0r-R7-SY6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="127" id="u8O-jm-Jxo"/>
+                            <constraint firstItem="qwC-iY-se7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="151" id="uH2-pF-8Ub"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="botonPresiona" destination="Wk8-NM-Mcu" id="XMu-iY-UQO"/>
+                        <outlet property="labelDeTexto" destination="qwC-iY-se7" id="N4s-VP-M9m"/>
+                        <outlet property="labelHola" destination="8sJ-ON-j6o" id="uyr-Dr-1KS"/>
+                        <outlet property="labelMXN" destination="yHB-JA-tTL" id="qzq-hx-yCJ"/>
+                        <outlet property="labelMoneda" destination="g0r-R7-SY6" id="5cc-Oh-cHh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>

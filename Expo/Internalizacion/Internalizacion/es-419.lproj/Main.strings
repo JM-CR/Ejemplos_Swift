@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "Hola"; ObjectID = "8sJ-ON-j6o"; */
+"8sJ-ON-j6o.text" = "Hola";
+
+/* Class = "UIButton"; normalTitle = "Presionar"; ObjectID = "Wk8-NM-Mcu"; */
+"Wk8-NM-Mcu.normalTitle" = "Presionar";
+
+/* Class = "UILabel"; text = "Moneda"; ObjectID = "g0r-R7-SY6"; */
+"g0r-R7-SY6.text" = "Moneda";
+
+/* Class = "UILabel"; text = "Texto:"; ObjectID = "qwC-iY-se7"; */
+"qwC-iY-se7.text" = "Texto:";
+
+/* Class = "UILabel"; text = "MXN"; ObjectID = "yHB-JA-tTL"; */
+"yHB-JA-tTL.text" = "MXN";
