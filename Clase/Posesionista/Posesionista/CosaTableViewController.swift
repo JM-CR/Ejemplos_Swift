@@ -1,17 +1,15 @@
 //
-//  CosasTableViewController.swift
+//  CosaTableViewController.swift
 //  Posesionista
 //
-//  Created by Contreras Rocha Josue Mosiah on 10/9/19.
+//  Created by Contreras Rocha Josue Mosiah on 10/16/19.
 //  Copyright © 2019 Contreras Rocha Josue Mosiah. All rights reserved.
 //
 
 import UIKit
 
-class CosasTableViewController: UITableViewController {
+class CosaTableViewController: UITableViewController {
 
-    let miInventario = Inventario()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,49 +24,24 @@ class CosasTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.miInventario.todasLasCosas.count
+        return 0
     }
 
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cosaCell", for: indexPath)
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+
         // Configure the cell...
-        let item = miInventario.todasLasCosas[indexPath.row]
-        cell.textLabel?.text = item.nombre
-        cell.detailTextLabel?.text = "$\(item.valorEnPesos)"
-        
+
         return cell
     }
+    */
 
-    /**
-     Entra y sale del modo de edición.
-     */
-    @IBAction func cambiaModoDeEdicion(_ sender: UIButton) {
-        if isEditing {
-            sender.setTitle("Editar", for: .normal)
-            setEditing(false, animated: true)
-        } else {
-            sender.setTitle("Listo", for: .normal)
-            setEditing(true, animated: true)
-        }
-    }
-    
-    /**
-     Permite añadir una nueva fila.
-     */
-    @IBAction func añadeCosas(_ sender: UIButton) {
-        let nuevaCosa = miInventario.creaCosa()
-        let indiceDeNuevaCosa = miInventario.todasLasCosas.firstIndex(of: nuevaCosa)!
-//        let ultimaFila = tableView.numberOfRows(inSection: 0)
-        let indexPath = IndexPath(row: indiceDeNuevaCosa, section: 0)
-        tableView.insertRows(at: [indexPath], with: .automatic)
-    }
-    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -77,22 +50,24 @@ class CosasTableViewController: UITableViewController {
     }
     */
 
+    /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            let cosaABorrar = miInventario.todasLasCosas[indexPath.row]
-            miInventario.eliminaCosa(cosaAEliminar: cosaABorrar)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
+    */
 
+    /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-        miInventario.reordena(de: fromIndexPath.row, hacia: to.row)
+
     }
+    */
 
     /*
     // Override to support conditional rearranging of the table view.
