@@ -9,16 +9,19 @@
 import Foundation
 
 class Cosa: NSObject {
+    
     var nombre: String
     var valorEnPesos: Int
     var numeroDeSerie: String?
     let fechaDeCreacion: Date
+    let llaveDeCosa: String
     
     init(nombre: String, valor: Int, serie: String?, alta: Date) {
         self.nombre = nombre
         self.valorEnPesos = valor
         self.numeroDeSerie = serie
         self.fechaDeCreacion = alta
+        self.llaveDeCosa = UUID().uuidString
         super.init()
     }
     

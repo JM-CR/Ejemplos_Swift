@@ -11,6 +11,7 @@ import UIKit
 class CosasTableViewController: UITableViewController {
 
     let miInventario = Inventario()
+    let inventarioDeImagenes = InventarioDeImagenes()
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -84,7 +85,8 @@ class CosasTableViewController: UITableViewController {
         if editingStyle == .delete {
             // Delete the row from the data source
             let cosaABorrar = miInventario.todasLasCosas[indexPath.row]
-            miInventario.eliminaCosa(cosaAEliminar: cosaABorrar)
+            self.miInventario.eliminaCosa(cosaAEliminar: cosaABorrar)
+            self.inventarioDeImagenes.borraImagen(paraLaLlave: cosaABorrar.llaveDeCosa)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -109,6 +111,7 @@ class CosasTableViewController: UITableViewController {
             if let filaSeleccionada = self.tableView.indexPathForSelectedRow {
                 let detalleVC = segue.destination as! DetalleViewController
                 detalleVC.cosaADetallar = miInventario.todasLasCosas[filaSeleccionada.row]
+                detalleVC.inventarioDeImagenes = self.inventarioDeImagenes
             }
         }
     }

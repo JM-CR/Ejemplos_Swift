@@ -16,6 +16,7 @@ class DetalleViewController: UIViewController, UITextFieldDelegate, UIImagePicke
     @IBOutlet weak var labelFecha: UILabel!
     @IBOutlet weak var foto: UIImageView!
     
+    var inventarioDeImagenes: InventarioDeImagenes!
     var cosaADetallar: Cosa! {
         didSet {
             navigationItem.title = self.cosaADetallar.nombre
@@ -48,6 +49,9 @@ class DetalleViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         self.campoSerie.text = cosaADetallar.numeroDeSerie
         self.campoPrecio.text = formatoDePrecio.string(from: NSNumber(value: cosaADetallar.valorEnPesos))
         self.labelFecha.text = formatoDeFecha.string(from: cosaADetallar.fechaDeCreacion)
+        
+        // Cargar imagen
+        self.foto.image = self.inventarioDeImagenes.getImagen(paraLaLlave: cosaADetallar.llaveDeCosa)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -66,6 +70,16 @@ class DetalleViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         return true
     }
     
+    /**
+     Trata la imagen después de que el usuario la selecciona.
+     */
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let imagen = info[.originalImage] as! UIImage
+        self.foto.image = imagen
+        self.inventarioDeImagenes.setImagen(imagen, paraLaLlave: self.cosaADetallar.llaveDeCosa)
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func tomaFoto(_ sender: UIBarButtonItem) {
         let picker = UIImagePickerController()
         
@@ -82,14 +96,5 @@ class DetalleViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         // Presentar
         present(picker, animated: true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

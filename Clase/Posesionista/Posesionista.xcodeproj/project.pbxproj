@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA6FA4EB23611C2300BAEA50 /* InventarioDeImagenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6FA4EA23611C2300BAEA50 /* InventarioDeImagenes.swift */; };
 		EAE4C2D02357DF39004F0B12 /* CosaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4C2CF2357DF39004F0B12 /* CosaTableViewCell.swift */; };
 		EAE4C2D22357EB68004F0B12 /* DetalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4C2D12357EB68004F0B12 /* DetalleViewController.swift */; };
 		EAFC125F234EB0A50089571A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFC125E234EB0A50089571A /* AppDelegate.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA6FA4EA23611C2300BAEA50 /* InventarioDeImagenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventarioDeImagenes.swift; sourceTree = "<group>"; };
 		EAE4C2CF2357DF39004F0B12 /* CosaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosaTableViewCell.swift; sourceTree = "<group>"; };
 		EAE4C2D12357EB68004F0B12 /* DetalleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleViewController.swift; sourceTree = "<group>"; };
 		EAFC125B234EB0A50089571A /* Posesionista.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Posesionista.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +89,7 @@
 			children = (
 				EAFC128C234EB1310089571A /* Cosa.swift */,
 				EAFC128E234EB5F80089571A /* Inventario.swift */,
+				EA6FA4EA23611C2300BAEA50 /* InventarioDeImagenes.swift */,
 			);
 			path = Modelo;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA6FA4EB23611C2300BAEA50 /* InventarioDeImagenes.swift in Sources */,
 				EAE4C2D22357EB68004F0B12 /* DetalleViewController.swift in Sources */,
 				EAFC125F234EB0A50089571A /* AppDelegate.swift in Sources */,
 				EAFC1291234EB72C0089571A /* CosasTableViewController.swift in Sources */,
