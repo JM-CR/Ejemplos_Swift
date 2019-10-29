@@ -10,7 +10,7 @@ import UIKit
 
 class CosasTableViewController: UITableViewController {
 
-    let miInventario = Inventario()
+    var miInventario: Inventario!
     let inventarioDeImagenes = InventarioDeImagenes()
     
     required init?(coder aDecoder: NSCoder) {

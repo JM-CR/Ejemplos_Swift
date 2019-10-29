@@ -46,6 +46,7 @@
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="4PR-ni-ao4" secondAttribute="trailing" constant="363" id="35Y-Wy-o2M"/>
                                         <constraint firstAttribute="trailing" secondItem="QcF-7J-vXl" secondAttribute="trailing" constant="20" id="3I0-SS-hN9"/>
                                         <constraint firstAttribute="bottom" secondItem="QcF-7J-vXl" secondAttribute="bottom" constant="21.5" id="7WY-S3-cWu"/>
                                         <constraint firstItem="4PR-ni-ao4" firstAttribute="top" secondItem="YWO-RZ-4wq" secondAttribute="bottom" constant="14.5" id="HbP-hA-hXl"/>
@@ -53,7 +54,6 @@
                                         <constraint firstItem="QcF-7J-vXl" firstAttribute="top" secondItem="4En-Rc-zK5" secondAttribute="top" constant="22" id="Wkt-jQ-CPT"/>
                                         <constraint firstItem="QcF-7J-vXl" firstAttribute="leading" relation="lessThanOrEqual" secondItem="YWO-RZ-4wq" secondAttribute="trailing" constant="290" id="d0v-OW-v8p"/>
                                         <constraint firstItem="YWO-RZ-4wq" firstAttribute="top" secondItem="4En-Rc-zK5" secondAttribute="top" constant="4" id="g3v-Q3-JUu"/>
-                                        <constraint firstItem="QcF-7J-vXl" firstAttribute="leading" relation="lessThanOrEqual" secondItem="4PR-ni-ao4" secondAttribute="trailing" constant="301" id="oo7-fZ-VdR"/>
                                         <constraint firstItem="YWO-RZ-4wq" firstAttribute="leading" secondItem="4En-Rc-zK5" secondAttribute="leading" constant="20" id="qgy-4C-SdX"/>
                                     </constraints>
                                 </tableViewCellContentView>
