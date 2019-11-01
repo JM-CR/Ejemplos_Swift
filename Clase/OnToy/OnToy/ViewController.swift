@@ -8,8 +8,9 @@
 
 import UIKit
 import CoreLocation
+import MapKit
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     var manager = CLLocationManager()
     var ubicacionPrevia: CLLocation? = nil
@@ -21,6 +22,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var labelAltitud: UILabel!
     @IBOutlet weak var labelPrecisionVertical: UILabel!
     @IBOutlet weak var labelDistanciaRecorrida: UILabel!
+    @IBOutlet weak var mapa: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.manager.delegate = self
         self.manager.desiredAccuracy = kCLLocationAccuracyBest
         self.manager.requestWhenInUseAuthorization()
+        
+        // Configurar mapa
+        self.mapa.delegate = self
     }
 
     /**
@@ -41,8 +46,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         switch status {
         case .authorizedWhenInUse, .authorizedAlways:
             self.manager.startUpdatingLocation()
+            self.mapa.showsUserLocation = true
         default:
             self.manager.stopUpdatingLocation()
+            self.mapa.showsUserLocation = false
         }
     }
     
@@ -64,6 +71,55 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
      Realiza una acción cuando cambia la localización.
      */
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print("\(locations.last!)")
+        // Mostrar última ubicación
+        let nuevaUbicacion = locations.last!
+        self.labelLatitud.text = String(format: "%g\u{00B0}", nuevaUbicacion.coordinate.latitude)
+        self.labelLongitud.text = String(format: "%g\u{00B0}", nuevaUbicacion.coordinate.longitude)
+        self.labelPrecisionHorizontal.text = String(format: "%g m", nuevaUbicacion.horizontalAccuracy)
+        self.labelAltitud.text = String(format: "%g m", nuevaUbicacion.altitude)
+        self.labelPrecisionVertical.text = String(format: "%g m", nuevaUbicacion.verticalAccuracy)
+        
+        // Calcular distancia recorrida
+        if ubicacionPrevia == nil {
+            self.desplazamientoTotal = 0
+            
+            // Agregar anotación
+            let inicio = Lugar(coordenada: nuevaUbicacion.coordinate, titulo: "Inicio", subtitulo: "Primer paso")
+            self.mapa.addAnnotation(inicio)
+            
+            // Centrar en el mapa
+            let region = MKCoordinateRegion(center: inicio.coordinate, latitudinalMeters: 100, longitudinalMeters: 100)
+            self.mapa.setRegion(region, animated: true)
+        } else if (nuevaUbicacion.coordinate.latitude != ubicacionPrevia!.coordinate.latitude) && (nuevaUbicacion.coordinate.longitude != ubicacionPrevia!.coordinate.longitude) {
+                self.desplazamientoTotal += nuevaUbicacion.distance(from: ubicacionPrevia!) / 1000
+            
+                // Centrar en el mapa
+                self.mapa.setCenter(nuevaUbicacion.coordinate, animated: true)
+            
+                // Agregar anotación
+                let siguienteDestino = Lugar(coordenada: nuevaUbicacion.coordinate, titulo: "Siguiente puerto", subtitulo: nil)
+                self.mapa.addAnnotation(siguienteDestino)
+        }
+        
+        // Actualizar posición
+        self.ubicacionPrevia = nuevaUbicacion
+        self.labelDistanciaRecorrida.text = String(format: "%g km", self.desplazamientoTotal)
     }
+    
+    /**
+     Personaliza la anotación que va a ser añadida al mapa.
+     */
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is Lugar {
+            // Crear anotación de Homero
+            let imagenParaAnotacion = MKAnnotationView(annotation: annotation, reuseIdentifier: "imagenParaLugar")
+            let imagen = UIImage(named: "homeroanotacion.png")
+            imagenParaAnotacion.image = imagen
+            imagenParaAnotacion.canShowCallout = true
+            
+            return imagenParaAnotacion
+        }
+        return nil
+    }
+    
 }

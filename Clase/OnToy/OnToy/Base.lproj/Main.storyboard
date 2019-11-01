@@ -18,7 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a0b-zN-Kfi" userLabel="Vista Inferior">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ivf-3x-UxU">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </mapView>
+                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a0b-zN-Kfi" userLabel="Vista Inferior">
                                 <rect key="frame" x="0.0" y="609.5" width="414" height="286.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bCm-Nb-Kvf">
@@ -133,7 +136,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCB-kr-rBc">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bCB-kr-rBc">
                                                         <rect key="frame" x="318" y="0.0" width="80" height="40.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="S2f-J5-7eR"/>
@@ -156,12 +159,16 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ivf-3x-UxU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9Di-4h-nhl"/>
+                            <constraint firstItem="ivf-3x-UxU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Hd3-Ce-yDU"/>
                             <constraint firstItem="a0b-zN-Kfi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ITX-yQ-Oox"/>
                             <constraint firstAttribute="bottom" secondItem="a0b-zN-Kfi" secondAttribute="bottom" id="MXy-CO-Q5v"/>
+                            <constraint firstItem="ivf-3x-UxU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Mny-eT-4tQ"/>
                             <constraint firstItem="a0b-zN-Kfi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ow4-aG-4PL"/>
                             <constraint firstItem="a0b-zN-Kfi" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.35" id="Yxg-0S-a5S"/>
+                            <constraint firstItem="ivf-3x-UxU" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="lpI-Oj-u0H"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -172,6 +179,7 @@
                         <outlet property="labelLongitud" destination="HyS-Dn-K8K" id="7lB-8J-sSk"/>
                         <outlet property="labelPrecisionHorizontal" destination="tg8-mS-Tau" id="llB-rj-nMp"/>
                         <outlet property="labelPrecisionVertical" destination="33g-Lm-6zG" id="bmk-wI-Nd2"/>
+                        <outlet property="mapa" destination="ivf-3x-UxU" id="XBL-0e-pQZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

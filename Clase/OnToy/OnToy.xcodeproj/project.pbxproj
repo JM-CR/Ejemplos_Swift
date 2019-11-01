@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA68A6E1236BB87B00B9C6E6 /* Lugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA68A6E0236BB87B00B9C6E6 /* Lugar.swift */; };
 		EAA5A433236A6688001E1F4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5A432236A6688001E1F4E /* AppDelegate.swift */; };
 		EAA5A435236A6688001E1F4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5A434236A6688001E1F4E /* ViewController.swift */; };
 		EAA5A438236A6688001E1F4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAA5A436236A6688001E1F4E /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA68A6E0236BB87B00B9C6E6 /* Lugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lugar.swift; sourceTree = "<group>"; };
 		EAA5A42F236A6688001E1F4E /* OnToy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnToy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAA5A432236A6688001E1F4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAA5A434236A6688001E1F4E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,8 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				EAA5A432236A6688001E1F4E /* AppDelegate.swift */,
-				EAA5A434236A6688001E1F4E /* ViewController.swift */,
 				EAA5A436236A6688001E1F4E /* Main.storyboard */,
+				EAA5A434236A6688001E1F4E /* ViewController.swift */,
+				EA68A6E0236BB87B00B9C6E6 /* Lugar.swift */,
 				EAA5A439236A6689001E1F4E /* Assets.xcassets */,
 				EAA5A43B236A6689001E1F4E /* LaunchScreen.storyboard */,
 				EAA5A43E236A6689001E1F4E /* Info.plist */,
@@ -137,6 +140,7 @@
 			files = (
 				EAA5A435236A6688001E1F4E /* ViewController.swift in Sources */,
 				EAA5A433236A6688001E1F4E /* AppDelegate.swift in Sources */,
+				EA68A6E1236BB87B00B9C6E6 /* Lugar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
