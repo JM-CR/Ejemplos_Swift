@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sensores" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dF-y9-AfQ">
+                                <rect key="frame" x="20" y="44" width="124" height="30"/>
+                                <state key="normal" title="Eventos"/>
+                                <connections>
+                                    <action selector="actualizaPorEvento:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T1R-Kx-J7p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oyp-km-AoS">
+                                <rect key="frame" x="152" y="44" width="124.5" height="30"/>
+                                <state key="normal" title="Continua"/>
+                                <connections>
+                                    <action selector="actualizaContinua:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E1r-Qn-aYr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqc-7d-uSb">
+                                <rect key="frame" x="285" y="44" width="109" height="30"/>
+                                <state key="normal" title="Detener"/>
+                                <connections>
+                                    <action selector="actualizaDetener:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zcu-IT-AdQ"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9Za-o9-48F">
+                                <rect key="frame" x="20" y="82" width="374" height="780"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ruv-po-pDu">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="260"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CnI-CD-m8K">
+                                        <rect key="frame" x="0.0" y="260" width="374" height="260"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0Z-sU-phs">
+                                        <rect key="frame" x="0.0" y="520" width="374" height="260"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wqc-7d-uSb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0GM-BO-FFY"/>
+                            <constraint firstItem="wqc-7d-uSb" firstAttribute="leading" secondItem="Oyp-km-AoS" secondAttribute="trailing" constant="8.5" id="2yp-ce-Arg"/>
+                            <constraint firstItem="Oyp-km-AoS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3Co-Tj-4B3"/>
+                            <constraint firstItem="9dF-y9-AfQ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.3" id="5on-QB-gqO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wqc-7d-uSb" secondAttribute="trailing" constant="20" id="QK8-sf-t7x"/>
+                            <constraint firstItem="Oyp-km-AoS" firstAttribute="leading" secondItem="9dF-y9-AfQ" secondAttribute="trailing" constant="8" id="W7h-5h-Qgy"/>
+                            <constraint firstItem="9dF-y9-AfQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YPf-lm-Q74"/>
+                            <constraint firstItem="9Za-o9-48F" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dCY-b2-kgf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Za-o9-48F" secondAttribute="trailing" constant="20" id="f1q-1c-9Fa"/>
+                            <constraint firstItem="Oyp-km-AoS" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.3" id="f4A-dN-y3N"/>
+                            <constraint firstItem="9Za-o9-48F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lg8-n8-fKx"/>
+                            <constraint firstItem="9Za-o9-48F" firstAttribute="top" secondItem="9dF-y9-AfQ" secondAttribute="bottom" constant="8" id="sdo-eV-tYW"/>
+                            <constraint firstItem="9dF-y9-AfQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="yAk-nP-7aY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="botonContinua" destination="Oyp-km-AoS" id="naw-Ox-sRv"/>
+                        <outlet property="botonDetener" destination="wqc-7d-uSb" id="GhZ-uE-SYz"/>
+                        <outlet property="botonEventos" destination="9dF-y9-AfQ" id="0hc-A5-7dJ"/>
+                        <outlet property="labelAcelerometro" destination="Ruv-po-pDu" id="9YV-k3-krD"/>
+                        <outlet property="labelActitud" destination="t0Z-sU-phs" id="rHD-jF-Kya"/>
+                        <outlet property="labelGiroscopio" destination="CnI-CD-m8K" id="wV3-xu-UdA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
