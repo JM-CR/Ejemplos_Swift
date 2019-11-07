@@ -122,4 +122,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         return nil
     }
     
+    /**
+     Cambia el tipo de mapa.
+     */
+    @IBAction func tipoDeMapa(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0: self.mapa.mapType = .standard
+        case 1: self.mapa.mapType = .satellite
+        default: self.mapa.mapType = .hybrid
+        }
+    }
+    
 }

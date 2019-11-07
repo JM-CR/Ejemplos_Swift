@@ -158,15 +158,29 @@
                                     <constraint firstAttribute="bottom" secondItem="bCm-Nb-Kvf" secondAttribute="bottom" constant="34.5" id="tfK-AY-sO3"/>
                                 </constraints>
                             </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VSy-VG-7LL">
+                                <rect key="frame" x="95" y="69" width="225" height="29"/>
+                                <segments>
+                                    <segment title="Mapa"/>
+                                    <segment title="Satélite"/>
+                                    <segment title="Híbrido"/>
+                                </segments>
+                                <connections>
+                                    <action selector="tipoDeMapa:" destination="BYZ-38-t0r" eventType="valueChanged" id="a8p-IO-qKw"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VSy-VG-7LL" secondAttribute="trailing" constant="94" id="6QJ-uS-cRC"/>
                             <constraint firstItem="ivf-3x-UxU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9Di-4h-nhl"/>
                             <constraint firstItem="ivf-3x-UxU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Hd3-Ce-yDU"/>
                             <constraint firstItem="a0b-zN-Kfi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ITX-yQ-Oox"/>
+                            <constraint firstItem="VSy-VG-7LL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="M2k-D9-FXr"/>
                             <constraint firstAttribute="bottom" secondItem="a0b-zN-Kfi" secondAttribute="bottom" id="MXy-CO-Q5v"/>
                             <constraint firstItem="ivf-3x-UxU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Mny-eT-4tQ"/>
                             <constraint firstItem="a0b-zN-Kfi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ow4-aG-4PL"/>
+                            <constraint firstItem="VSy-VG-7LL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="95" id="ShS-HI-NGr"/>
                             <constraint firstItem="a0b-zN-Kfi" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.35" id="Yxg-0S-a5S"/>
                             <constraint firstItem="ivf-3x-UxU" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="lpI-Oj-u0H"/>
                         </constraints>
