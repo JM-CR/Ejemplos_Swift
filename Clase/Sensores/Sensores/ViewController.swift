@@ -65,6 +65,7 @@ class ViewController: UIViewController {
             
             // Frecuencia de actualización
             self.motionManager.deviceMotionUpdateInterval = 0.1
+            self.motionManager.startDeviceMotionUpdates()
             
             // Tiempo de lectura
             self.timerDeActualizacion = Timer(timeInterval: 0.1, target: self, selector: #selector(actualizaDisplay), userInfo: nil, repeats: true)
